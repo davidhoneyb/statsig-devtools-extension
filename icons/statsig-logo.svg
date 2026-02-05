@@ -1,0 +1,8 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Statsig logo mark - the original paths span roughly x:1-126, y:0-113 -->
+  <!-- Centering within 128x128 with some padding -->
+  <g transform="translate(6, 7)">
+    <path d="M108.294 25.821l-35.503 53.08-17.078-25.455-39.558 58.97.174.264h71.18a7.337 7.337 0 0 0 6.098-3.244l32.674-48.732a7.238 7.238 0 0 0 0-8.059l-17.997-26.834.01.01Z" fill="#4a90d9"/>
+    <path d="m55.713 32.471 17.058 25.435L111.052.68H40.158a7.336 7.336 0 0 0-6.098 3.244L1.386 52.644a7.237 7.237 0 0 0 0 8.06l17.69 26.378 36.637-54.611Z" fill="#4a90d9"/>
+  </g>
+</svg>

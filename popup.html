@@ -17,6 +17,7 @@
     <nav class="tabs">
       <button class="tab active" data-tab="gates">Gates</button>
       <button class="tab" data-tab="experiments">Experiments</button>
+      <button class="tab" data-tab="all">All</button>
     </nav>
 
     <!-- Gates Tab -->
@@ -38,10 +39,11 @@
             required
             autocomplete="off"
           >
-          <label class="toggle-label">
-            <input type="checkbox" id="gate-value" checked>
-            <span class="toggle-text">Enabled</span>
-          </label>
+          <div class="toggle-switch" id="gate-value-toggle">
+            <span class="toggle-option false">false</span>
+            <span class="toggle-option true active">true</span>
+          </div>
+          <input type="hidden" id="gate-value" value="true">
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
       </section>
@@ -82,6 +84,27 @@
           >
           <button type="submit" class="btn btn-primary">Add</button>
         </form>
+      </section>
+    </div>
+
+    <!-- All Tab -->
+    <div class="tab-content" id="all-tab">
+      <section class="search-section">
+        <input type="text" id="search-all" placeholder="Search gates & experiments..." class="search-input">
+      </section>
+
+      <section class="all-section">
+        <h2>Feature Gates (<span id="gates-count">0</span>)</h2>
+        <div class="all-list" id="all-gates-list">
+          <p class="empty-message">Loading...</p>
+        </div>
+      </section>
+
+      <section class="all-section">
+        <h2>Experiments (<span id="experiments-count">0</span>)</h2>
+        <div class="all-list" id="all-experiments-list">
+          <p class="empty-message">Loading...</p>
+        </div>
       </section>
     </div>
 
