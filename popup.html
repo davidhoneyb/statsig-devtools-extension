@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HB Statsig DevTools</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>HB Statsig DevTools</h1>
+    </header>
+
+    <div class="status" id="status"></div>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="gates">Gates</button>
+      <button class="tab" data-tab="experiments">Experiments</button>
+    </nav>
+
+    <!-- Gates Tab -->
+    <div class="tab-content active" id="gates-tab">
+      <section class="overrides-section">
+        <h2>Active Gate Overrides</h2>
+        <div class="overrides-list" id="gates-list">
+          <p class="empty-message">No gate overrides</p>
+        </div>
+      </section>
+
+      <section class="add-section">
+        <h2>Add Gate Override</h2>
+        <form id="add-gate-form" class="add-form">
+          <input
+            type="text"
+            id="gate-name"
+            placeholder="gate_name"
+            required
+            autocomplete="off"
+          >
+          <label class="toggle-label">
+            <input type="checkbox" id="gate-value" checked>
+            <span class="toggle-text">Enabled</span>
+          </label>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Experiments Tab -->
+    <div class="tab-content" id="experiments-tab">
+      <section class="overrides-section">
+        <h2>Active Experiment Overrides</h2>
+        <div class="overrides-list" id="experiments-list">
+          <p class="empty-message">No experiment overrides</p>
+        </div>
+      </section>
+
+      <section class="add-section">
+        <h2>Add Experiment Override</h2>
+        <form id="add-experiment-form" class="add-form">
+          <input
+            type="text"
+            id="experiment-name"
+            placeholder="experiment_name"
+            required
+            autocomplete="off"
+          >
+          <input
+            type="text"
+            id="experiment-key"
+            placeholder="config_key"
+            required
+            autocomplete="off"
+          >
+          <input
+            type="text"
+            id="experiment-value"
+            placeholder="value"
+            required
+            autocomplete="off"
+          >
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <button id="clear-all" class="btn btn-danger">Clear All Overrides</button>
+      <label class="auto-refresh-label">
+        <input type="checkbox" id="auto-refresh" checked>
+        <span>Auto-refresh page</span>
+      </label>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
