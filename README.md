@@ -2,6 +2,8 @@
 
 A Chrome extension for overriding Statsig feature gates and experiment values during HoneyBook development.
 
+https://github.com/user-attachments/assets/4a5464d3-beb1-4a47-8e6d-d4791bd72e00
+
 ## Installation
 
 1. Open Chrome and navigate to `chrome://extensions/`
